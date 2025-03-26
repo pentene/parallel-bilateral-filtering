@@ -1,1 +1,0 @@
-# parallel-bilateral-filtering
