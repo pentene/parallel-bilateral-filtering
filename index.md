@@ -5,7 +5,7 @@ permalink: /
 ---
 
 ## Team Members
-[Your Name], [Partner's Name]
+Zhaowei Zhang, zhaoweiz
 
 ## URL
 [Your Project URL Here]
