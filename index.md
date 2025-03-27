@@ -6,7 +6,7 @@
 
 <!-- Tab Contents -->
 
-<div id="overview" class="tabcontent" markdown="1">
+<div id="overview" class="tabcontent" markdown="span">
 <!-- Put your Overview Markdown content here -->
 <h2>Project Overview</h2>
 <p>
@@ -130,7 +130,7 @@ profiling and large-scale experimentation.
 
 <div id="report" class="tabcontent">
   <h2>Project Report</h2>
-  <iframe src="/assets/15418_Project_Proposal.pdf" width="100%" height="800px"></iframe>
+  <iframe src="assets/15418_Project_Proposal.pdf" width="100%" height="800px"></iframe>
 </div>
 
 <script>
