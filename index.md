@@ -152,6 +152,12 @@ document.getElementById("defaultOpen").click();
 </script>
 
 <style>
+.page-content {
+max-width: 2400px; /* Adjust to your desired width */
+margin: 0 auto;    /* Centers the content horizontally */
+padding: 0 20px;   /* Adds a bit of padding on sides */
+}
+
 .tabs {
   overflow: hidden;
   border-bottom: 1px solid #ccc;
@@ -179,12 +185,6 @@ document.getElementById("defaultOpen").click();
   display: none;
   padding: 15px;
   border-top: none;
-}
-
-.page-content {
-    max-width: 2500px; /* Adjust to your desired width */
-    margin: 0 auto;    /* Centers the content horizontally */
-    padding: 0 20px;   /* Adds a bit of padding on sides */
 }
 </style>
 
