@@ -1,3 +1,16 @@
+<!-- Tab Navigation -->
+<div class="tabs">
+  <button class="tablinks" onclick="openTab(event, 'overview')" id="defaultOpen">Overview</button>
+  <button class="tablinks" onclick="openTab(event, 'report')">Project Report (PDF)</button>
+</div>
+
+<!-- Tab Contents -->
+
+<div id="overview" class="tabcontent">
+<!-- Put your Overview Markdown content here -->
+<h2>Project Overview</h2>
+<p>
+
 ---
 layout: page
 title: "Parallel Bilateral Filtering Implementation and Optimization"
@@ -111,4 +124,14 @@ profiling and large-scale experimentation.
 | 4.16 - 4.23 | Optimize CUDA implementation based on analysis; evaluate GPU performance improvements |
 | 4.23 - 4.28 | Finalize benchmarking results, prepare poster and presentation materials |
 | 4.29        | Poster session |
+
+</p>
+</div>
+
+<div id="report" class="tabcontent">
+  <h2>Project Report</h2>
+  <iframe src="/assets/report.pdf" width="100%" height="800px"></iframe>
+</div>
+
+
 
