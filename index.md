@@ -182,7 +182,7 @@ document.getElementById("defaultOpen").click();
 }
 
 .page-content {
-    max-width: 1400px; /* Adjust to your desired width */
+    max-width: 2500px; /* Adjust to your desired width */
     margin: 0 auto;    /* Centers the content horizontally */
     padding: 0 20px;   /* Adds a bit of padding on sides */
 }
