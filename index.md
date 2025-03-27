@@ -9,7 +9,6 @@
 <div id="overview" class="tabcontent" markdown="block">
 <!-- Put your Overview Markdown content here -->
 <h2>Project Overview</h2>
-<p>
 
 ---
 layout: page
@@ -125,7 +124,6 @@ profiling and large-scale experimentation.
 | 4.23 - 4.28 | Finalize benchmarking results, prepare poster and presentation materials |
 | 4.29        | Poster session |
 
-</p>
 </div>
 
 <div id="report" class="tabcontent">
