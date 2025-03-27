@@ -9,7 +9,7 @@ Zhaowei Zhang, Eric Zhu -->
 
 # Project Website
 
-[https://pentene.github.io/parallel-bilateral-filtering](https://pentene.github.io/parallel-bilateral-filtering)
+[https://github.com/pentene/15418-final-project](https://github.com/pentene/15418-final-project)
 
 ---
 
@@ -88,7 +88,7 @@ Here is our current reference:
 
 - Paris, S., Kornprobst, P., Tumblin, J., & Durand, F. (2009). Bilateral filtering: Theory and applications. Foundations and Trends in Computer Graphics and Vision, 4(1), 1–73.
 
-- Nvidia documentation on bilateral filtering
+- [Nvidia documentation on bilateral filtering](https://docs.nvidia.com/vpi/algo_bilat_filter.html)
 
 ---
 
