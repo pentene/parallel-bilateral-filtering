@@ -130,8 +130,60 @@ profiling and large-scale experimentation.
 
 <div id="report" class="tabcontent">
   <h2>Project Report</h2>
-  <iframe src="/assets/report.pdf" width="100%" height="800px"></iframe>
+  <iframe src="/assets/15418_Project_Proposal.pdf" width="100%" height="800px"></iframe>
 </div>
 
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Open the default tab on load
+document.getElementById("defaultOpen").click();
+</script>
+
+<style>
+.tabs {
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+
+.tablinks {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.tablinks:hover {
+  background-color: #ddd;
+}
+
+.tablinks.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 15px;
+  border-top: none;
+}
+</style>
 
 
