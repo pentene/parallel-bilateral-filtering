@@ -180,6 +180,12 @@ document.getElementById("defaultOpen").click();
   padding: 15px;
   border-top: none;
 }
+
+.page-content {
+    max-width: 1400px; /* Adjust to your desired width */
+    margin: 0 auto;    /* Centers the content horizontally */
+    padding: 0 20px;   /* Adds a bit of padding on sides */
+}
 </style>
 
 
