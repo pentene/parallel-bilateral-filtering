@@ -10,16 +10,14 @@
 <!-- Put your Overview Markdown content here -->
 <h2>Project Overview</h2>
 
----
-layout: page
-title: "Parallel Bilateral Filtering Implementation and Optimization"
-# permalink: /
----
+# Parallel Bilateral Filtering Implementation and Optimization
 
+---
+<!-- 
 ## Team Members
-Zhaowei Zhang, Eric Zhu
+Zhaowei Zhang, Eric Zhu -->
 
-# Project Website
+## Project Website
 
 [https://github.com/pentene/15418-final-project](https://github.com/pentene/15418-final-project)
 
