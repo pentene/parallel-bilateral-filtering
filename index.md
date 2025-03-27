@@ -24,6 +24,13 @@ In this project, we will implement optimized parallel versions of the bilateral 
 Bilateral filtering is a widely-used image processing technique known for its effectiveness in smoothing images while preserving edges. This edge-preserving smoothing is accomplished
 by calculating the filtered value for each pixel as a weighted average of neighboring pixels, considering both spatial proximity and intensity similarity.
 
+The bilateral filter’s per-pixel computation involves intensive arithmetic operations and memory access, making it computationally expensive, particularly with large neighborhood
+windows or high-resolution images. Each pixel’s computation involves accessing neighboring pixels within a defined radius repeatedly. Nonetheless, it exhibits good potential for par-
+allelization since each pixel’s final output computation is independent of other pixels, even though there are neighborhood dependencies. Exploiting parallelism through CPU multi-
+threading (OpenMP) and GPU massive threading (CUDA) can reduce execution time and enhance efficiency.
+
+---
+
 ## Goals and Deliverables
 
 Planned Goals:
@@ -48,6 +55,8 @@ Fallback Goals:
 
 - Complete rigorous analysis clearly identifying bottlenecks and documenting performance insights.
 
+---
+
 ## Challenges
 
 Parallelizing bilateral filtering is challenging due to several critical factors:
@@ -64,6 +73,8 @@ Parallelizing bilateral filtering is challenging due to several critical factors
 
 Through addressing these challenges, we aim to gain deep insights into optimizing memory access patterns, synchronization overhead, and computational efficiency in parallel systems.
 
+---
+
 ## Resources
 
 Implementation and benchmarking will be performed primarily on GHC lab machines and Pittsburgh Supercomputing Center (PSC) resources. Initial sequential implementations will be verified against OpenCV’s bilateral filter for correctness. 
@@ -79,6 +90,8 @@ Here is our current reference:
 
 - Nvidia documentation on bilateral filtering
 
+---
+
 ## Platform Choice
 
 The GHC lab machines and PSC machines provide multi-core CPUs and GPU resources
@@ -86,5 +99,16 @@ suitable for our parallel implementations. GHC machines will facilitate developm
 initial testing, while the powerful GPU systems at PSC will enable detailed performance
 profiling and large-scale experimentation.
 
+---
+
 ## Schedule (Tentative)
+
+|   Week   | Planned Acrivity |
+| -------- | ------- |
+| 3.26 - 4.2  | Implement serial version of bilateral filter; begin OpenMP parallelization |
+| 4.2 - 4.9   | Analyze CPU performance, identify bottlenecks, and optimize OpenMP parallelization using course techniques |
+| 4.9 - 4.16  | Develop initial CUDA implementation; perform GPU profiling and identify bottlenecks |
+| 4.16 - 4.23 | Optimize CUDA implementation based on analysis; evaluate GPU performance improvements |
+| 4.23 - 4.28 | Finalize benchmarking results, prepare poster and presentation materials |
+| 4.29        | Poster session |
 
