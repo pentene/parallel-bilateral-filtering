@@ -126,7 +126,7 @@ profiling and large-scale experimentation.
 
 <div id="report" class="tabcontent">
   <h2>Project Report</h2>
-  <iframe src="assets/15418_Project_Proposal.pdf" width="150%" height="800px"></iframe>
+  <iframe src="assets/15418_Project_Proposal.pdf" width="050%" height="800px"></iframe>
 </div>
 
 <script>
