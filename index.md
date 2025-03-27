@@ -6,7 +6,7 @@
 
 <!-- Tab Contents -->
 
-<div id="overview" class="tabcontent">
+<div id="overview" class="tabcontent" markdown="1">
 <!-- Put your Overview Markdown content here -->
 <h2>Project Overview</h2>
 <p>
@@ -17,8 +17,8 @@ title: "Parallel Bilateral Filtering Implementation and Optimization"
 # permalink: /
 ---
 
-<!-- ## Team Members
-Zhaowei Zhang, Eric Zhu -->
+## Team Members
+Zhaowei Zhang, Eric Zhu
 
 # Project Website
 
