@@ -21,19 +21,19 @@ In this project, we will implement optimized parallel versions of the bilateral 
 
 ## Background
 
-Bilateral filtering is a widely-used image processing technique known for its effectiveness in smoothing images while preserving edges. This edge-preserving smoothing is accomplished by calculating the filtered value for each pixel as a weighted average of neighboring pixels, considering both spatial proximity and intensity similarity. Specifically, for a pixel $p$, the bilateral filter computes the filtered pixel intensity $I_p^{'}$ as: 
+Bilateral filtering is a widely-used image processing technique known for its effectiveness in smoothing images while preserving edges. This edge-preserving smoothing is accomplished by calculating the filtered value for each pixel as a weighted average of neighboring pixels, considering both spatial proximity and intensity similarity. Specifically, for a pixel $p$$, the bilateral filter computes the filtered pixel intensity $I_p^{'}$$ as: 
 
-$$I'(p) = \frac{1}{W_p} \sum_{q\in\Omega}I(p)k_r(\|I(q) - I(p)\|)k_s(\|p-q\|)$$ 
+$I'(p) = \frac{1}{W_p} \sum_{q\in\Omega}I(p)k_r(\|I(q) - I(p)\|)k_s(\|p-q\|)$$ 
 
-and the normalization term $W$, defined as 
+and the normalization term $W$$, defined as 
 
-$$W_p = \sum_{q\in\Omega}k_r(\|I(p)-I(q)\|)k_s(\|p-q\|)$$
+$W_p = \sum_{q\in\Omega}k_r(\|I(p)-I(q)\|)k_s(\|p-q\|)$$
 
 where:
 
-- $I$ and $I'$ are the input and output images
-- $k_r$ and $k_s$ are the range and space kernels each with its own definition
-- $\sigma_r$ is the intensity range smoothed out and $\sigma_s$ is the smoothing factor
+- $I$$ and $I^'$$ are the input and output images
+- $k_r$$ and $k_s$$ are the range and space kernels each with its own definition
+- $\sigma_r$$ is the intensity range smoothed out and $\sigma_s$$ is the smoothing factor
 
 ## The Challenge
 The challenge lies in effectively parallelizing and optimizing memory access patterns, given bilateral filtering's inherent data-intensive nature. The algorithm requires intensive data access within each pixel's neighborhood, leading to challenges in memory bandwidth and cache performance on CPUs, and shared memory optimization and memory coalescing on GPUs. Ensuring minimal synchronization and efficient data-sharing among threads further complicates parallel implementation.
