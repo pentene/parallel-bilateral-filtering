@@ -21,41 +21,34 @@ In this project, we will implement optimized parallel versions of the bilateral 
 
 ## Background
 
-Bilateral filtering is a widely-used image processing technique known for its effectiveness in smoothing images while preserving edges. This edge-preserving smoothing is accomplished by calculating the filtered value for each pixel as a weighted average of neighboring pixels, considering both spatial proximity and intensity similarity. Specifically, for a pixel $`p`$, the bilateral filter computes the filtered pixel intensity $`I_p^{'}`$ as: 
-
-$I'(p) = \frac{1}{W_p} \sum_{q\in\Omega}I(p)k_r(\|I(q) - I(p)\|)k_s(\|p-q\|)$$ 
-
-and the normalization term $W$$, defined as 
-
-$W_p = \sum_{q\in\Omega}k_r(\|I(p)-I(q)\|)k_s(\|p-q\|)$$
-
-where:
-
-- $I$$ and $I^'$$ are the input and output images
-- $k_r$$ and $k_s$$ are the range and space kernels each with its own definition
-- $\sigma_r$$ is the intensity range smoothed out and $\sigma_s$$ is the smoothing factor
-
-## The Challenge
-The challenge lies in effectively parallelizing and optimizing memory access patterns, given bilateral filtering's inherent data-intensive nature. The algorithm requires intensive data access within each pixel's neighborhood, leading to challenges in memory bandwidth and cache performance on CPUs, and shared memory optimization and memory coalescing on GPUs. Ensuring minimal synchronization and efficient data-sharing among threads further complicates parallel implementation.
-
-## Resources
-We will use standard lab machines with multi-core CPUs and CUDA-capable GPUs. The project starts from scratch, developing implementations using OpenMP for CPU parallelization and CUDA for GPU acceleration. Essential references include:
-- C. Tomasi and R. Manduchi, "Bilateral Filtering for Gray and Color Images," ICCV, 1998.
-- NVIDIA CUDA Programming Guide
+Bilateral filtering is a widely-used image processing technique known for its effectiveness in smoothing images while preserving edges. This edge-preserving smoothing is accomplished
+by calculating the filtered value for each pixel as a weighted average of neighboring pixels, considering both spatial proximity and intensity similarity.
 
 ## Goals and Deliverables
-### Plan to Achieve:
-- Sequential bilateral filtering baseline implementation.
-- Parallel bilateral filtering with OpenMP, achieving measurable speedup (targeting ~4-8x on 8-core CPU).
-- GPU implementation using CUDA with basic optimizations (targeting at least 10-20x improvement over sequential).
-- Detailed benchmarking and comparative performance analysis between CPU and GPU versions.
 
-### Hope to Achieve (if time permits):
-- Advanced GPU optimizations (shared memory, coalescing), targeting additional 2-4x speedup.
-- Analysis of scalability on higher-resolution images.
+### Planned Goals
 
-## Platform Choice
-CPU with OpenMP allows effective parallelization and rapid prototyping of image processing kernels, whereas GPUs using CUDA provide substantial parallel arithmetic capability ideal for computationally heavy bilateral filtering. The combination enables insightful comparative analysis.
+- Achieve at least a 4x speedup with CPU parallelization using OpenMP compared to the sequential baseline.
+
+- Achieve at least a 10x speedup with GPU parallelization using CUDA compared to the sequential baseline.
+
+- Perform a thorough comparative analysis of performance and scalability between CPU and GPU implementations using image datasets such as High Resolution Image Quality (HRIQ) and The USC-SIPI Image Database.
+
+- Validate correctness by comparing results with the OpenCV bilateral filtering implementation.
+
+### Aspirational Goals
+
+- Achieve a 10x speedup on CPU with robust scalability across varying image sizes.
+
+- Achieve a speedup exceeding 50x on GPU through advanced optimizations such as FFT-based fast convolution techniques inspired by Sylvain Paris and Frédo Durand's work ("A Fast Approximation of the Bilateral Filter using a Signal Processing Approach").
+
+### Fallback Goals
+
+- Ensure fully functional parallel implementations with measured performance gains, even if the desired speedup targets are not fully met.
+
+- Complete rigorous analysis clearly identifying bottlenecks and documenting performance insights.
+
+
 
 ## Schedule (Tentative)
 
