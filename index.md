@@ -6,7 +6,7 @@
 
 <!-- Tab Contents -->
 
-<div id="overview" class="tabcontent" markdown="1">
+<div id="overview" class="tabcontent" markdown="block">
 <!-- Put your Overview Markdown content here -->
 <h2>Project Overview</h2>
 <p>
