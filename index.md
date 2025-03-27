@@ -21,7 +21,7 @@ In this project, we will implement optimized parallel versions of the bilateral 
 
 ## Background
 
-Bilateral filtering is a widely-used image processing technique known for its effectiveness in smoothing images while preserving edges. This edge-preserving smoothing is accomplished by calculating the filtered value for each pixel as a weighted average of neighboring pixels, considering both spatial proximity and intensity similarity. Specifically, for a pixel $p$$, the bilateral filter computes the filtered pixel intensity $I_p^{'}$$ as: 
+Bilateral filtering is a widely-used image processing technique known for its effectiveness in smoothing images while preserving edges. This edge-preserving smoothing is accomplished by calculating the filtered value for each pixel as a weighted average of neighboring pixels, considering both spatial proximity and intensity similarity. Specifically, for a pixel $`p`$, the bilateral filter computes the filtered pixel intensity $`I_p^{'}`$ as: 
 
 $I'(p) = \frac{1}{W_p} \sum_{q\in\Omega}I(p)k_r(\|I(q) - I(p)\|)k_s(\|p-q\|)$$ 
 
